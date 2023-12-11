@@ -2,5 +2,3 @@
 homework for the course and additional autotesting attempts
 
 as well as an attempt to master git
-
-нежелательный комментарий для тренировки отката коммита
