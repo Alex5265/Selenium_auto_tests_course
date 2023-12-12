@@ -1,19 +1,20 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time 
+import time
 
 # explicitly fixing the site for less hardcoding (явно фиксируем сайт для возможности изменить в любой момент)
-link = "http://suninjuly.github.io/simple_form_find_task.html"
+link = "http://suninjuly.github.io/find_xpath_form"
 # give variable Chrome - brower
-browser = webdriver.Chrome()
 
+
+browser = webdriver.Chrome()
 browser.get(link)
 
 #try do tests things (пробуем сделать тестовые вещи)
 try:
 
     #find name by TAG and send value
-    name_find = browser.find_element(By.TAG_NAME, "input")
+    name_find = browser.find_element(By.XPATH, "//input[@name='first_name']")
     name_find.send_keys("Ivan")
     #find last name and send value
     list_name_find = browser.find_element(By.NAME, "last_name")
@@ -25,7 +26,7 @@ try:
     country_find = browser.find_element(By.ID, "country")
     country_find.send_keys("Russia")
     #find button and click
-    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
+    button = browser.find_element(By.XPATH, "//div[6]//button[3]")
     button.click()
 
 finally:
