@@ -26,4 +26,13 @@ for c in range(cols):
         print(mtrx[r][c], end=' ')
     print()
 
-
+# 4
+# 2
+# и
+# швец
+# и
+# жнец
+# и
+# на
+# дуде
+# игрец

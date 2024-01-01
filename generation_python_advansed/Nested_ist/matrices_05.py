@@ -18,3 +18,10 @@ for r in range(n):
             max_in_area = matr[r][c]
 
 print(max_in_area)
+
+
+# 3
+# 1 4 5
+# 6 7 8
+# 1 1 6
+# 7 должно быть на выходе
