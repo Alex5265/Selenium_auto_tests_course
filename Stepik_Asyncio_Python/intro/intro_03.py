@@ -8,7 +8,7 @@ async def fetch_data():
 
 async def main():
     # Создаем список из 500 асинхронных задач, используя функцию fetch_data
-    tasks = [fetch_data() for _ in range(50)]
+    tasks = [fetch_data() for _ in range(10)]
     # Используем asyncio.gather для одновременного запуска всех задач
     results = await asyncio.gather(*tasks)
     # Для упрощения вывода в консоль покажем количество успешно выполненных задач
