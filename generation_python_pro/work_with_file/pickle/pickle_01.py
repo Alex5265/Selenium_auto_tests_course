@@ -1,17 +1,3 @@
-from copy import deepcopy
-
-data1 = [[1, 2], [3, 4]]
-data2 = deepcopy(data1)
-
-print(data1[0] is data2[0])
-print(data1[1] is data2[1])
-
-
-# word = 'everything'
-#
-# data = f"b'there is {word} here"
-#
-# print(type(data))
 
 
 
@@ -59,6 +45,3 @@ print(data1[1] is data2[1])
 #
 # print(obj == new_obj)
 # print(obj is new_obj)
-
-
-
