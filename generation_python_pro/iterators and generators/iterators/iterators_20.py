@@ -22,10 +22,25 @@
 # Примечание 4. В тестирующую систему сдайте программу, содержащую только
 # необходимый класс CardDeck.
 
+class CardDeck:
+    def __init__(self):
+        self.cards = iter(f'{j} {i}' for i in ("пик", "треф", "бубен", "червей") for j in ("2", "3", "4", "5", "6", "7", "8", "9", "10", "валет", "дама", "король", "туз"))
+
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        return next(self.cards)
 
 
 
+cards = list(CardDeck())
 
+print(cards[9])
+print(cards[23])
+print(cards[37])
+print(cards[51])
 
 
 
