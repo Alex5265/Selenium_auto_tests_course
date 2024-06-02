@@ -16,35 +16,14 @@
 # Программа должна в введенном тексте найти все телефонные номера, соответствующие форматам,
 # указанным в условии задачи, и вывести их в том порядке,
 # в котором они были найдены, каждый на отдельной строке.
+from re import findall
 
 
+regex = r'7-\d{3}-\d{3}-\d{2}-\d{2}|8-\d{3}-\d{4}-\d{4}'
+
+n = 'Тимур: 7-ddd-ddd-dd-dd, Сослан: 8-ddd-dddd-dddd, Артур: 7-123-123-11-22,,,, Дима: 8-123-123-11-22, Анри: 8-123-1231-1221...... Гвидо: 7-123-1231-1221, 7-123-13-181-22, 8-1237-131-1221'
+
+match1 = findall(regex, n)
+print(*match1, sep='\n')
 
 
-
-
-
-
-
-
-
-
-def is_phone_number(phone):
-    groups = phone.split('-')
-    if len(groups) != 4:
-        return False
-    chars = ''.join(groups)
-    return all(c.isdigit() for c in chars)
-
-def get_all_numbers(text):
-    for c in range(len(text)):
-        chunk = text[c:c + 15]
-        regex_7 =r'7-\d\d\d-\d\d\d-\d\d-\d\d'
-        if chunk is regex_7:
-            yield chunk
-
-txt = 'Перезвони мне, пожалуйста: 7-919-667-21-19'
-
-result = get_all_numbers(txt)
-
-for i in result:
-    print(i)
